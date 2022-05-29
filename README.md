@@ -1,1 +1,1 @@
-# canvas_projects
+# Canvas Projects
