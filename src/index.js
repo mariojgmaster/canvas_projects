@@ -73,14 +73,19 @@ app.get('/', (req, res) => {
 
     // ==========================================================
 
+    let { x, y } = req.query
+    x = parseInt(x)
+    y = parseInt(y)
 
     const { createCanvas, loadImage } = require('canvas')
-    const canvas = createCanvas(600, 600)
+    const canvas = createCanvas(x, y)
     const ctx = canvas.getContext('2d')
+
+    console.log({x, y})
 
     loadImage('examples/images/lime-cat.jpg').then((image) => {
         
-        ctx.drawImage(image, 0, 0, 600, 600)
+        ctx.drawImage(image, 0, 0, x, y)
 
         // console.log('<img src="' + canvas.toDataURL() + '" />')
 
