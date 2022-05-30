@@ -118,7 +118,7 @@ app.get('/', (req, res) => {
 
         // console.log(canvas.toDataURL())
         res.send(`
-            <img src="${canvas.toDataURL()}"></img>
+            <img style="object-fit: cover;" src="${canvas.toDataURL()}"></img>
         `)
 
     })
